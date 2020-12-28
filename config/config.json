@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "fill",
+    "password": "secret",
+    "database": "expressAPI",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+		"username": "fill",
+		"password": "secret",
+		"database": "expressAPI",
+		"host": "127.0.0.1",
+		"dialect": "mysql"
+  },
+  "production": {
+		"username": "fill",
+    "password": "secret",
+    "database": "expressAPI",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
