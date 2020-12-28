@@ -1,7 +1,7 @@
 // Express
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 // Mysql
 const db = require('./database');
@@ -26,6 +26,6 @@ app.use('/product', productRouter)
 app.use('/user', userRouter)
 
 // Boot Server
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
   console.log(`Server Berjalan di http://localhost:${port}`)
 })
