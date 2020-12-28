@@ -1,7 +1,7 @@
 const sequelize = require('sequelize')
 
 const db = new sequelize('expressAPI', 'fill', 'secret', {
-	dialect: 'mysql'
+	dialect: 'postgres'
 })
 
 db.sync;
