@@ -22,6 +22,10 @@ const productRouter = require('./src/routes/products')
 const userRouter    = require('./src/routes/user')
 const emasRouter    = require('./src/routes/emas')
 
+app.get('/', (req, res) => {
+  res.set('Content-Type', 'text/html');
+  res.send(Buffer.from('<h1><center>REST API For Assignments Made By Fillah Firdausyah</h1></center>'));
+})
 // Route list
 app.use('/product', productRouter)
 app.use('/user', userRouter)
