@@ -20,12 +20,14 @@ app.use(cors())
 // Route
 const productRouter = require('./src/routes/products')
 const userRouter    = require('./src/routes/user')
+const emasRouter    = require('./src/routes/emas')
 
 // Route list
 app.use('/product', productRouter)
 app.use('/user', userRouter)
+app.use('/emas', emasRouter)
 
-// Boot Server
+
 app.listen(port, () => {
   console.log(`Server Berjalan di http://localhost:${port}`)
 })

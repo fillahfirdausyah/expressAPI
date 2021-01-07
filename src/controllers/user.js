@@ -3,9 +3,9 @@ const User = require('../database/models/User')
 // CREATE USER
 exports.create = async(req, res) => {
   try {
-    const {username, email, password} = req.body;
+    const {nama, portofolio, total_emas, email, password} = req.body;
     const newUser = new User({
-      username, email, password
+      nama, portofolio, total_emas, email, password
     })
     await newUser.save()
     res.json({
@@ -82,11 +82,13 @@ exports.details = async(req, res) => {
 exports.update = async(req, res) => {
   try {
     const userId = req.params.id;
-    const {username, email, password} = req.body;
+    const {nama, portofolio, total_emas, email, password} = req.body;
 
     const updateUser = await User.update(
       {
-        username,
+        nama,
+        portofolio,
+        total_emas,
         email,
         password,
       },
